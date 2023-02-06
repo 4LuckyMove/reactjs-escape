@@ -1,0 +1,20 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap');
+// Font Oxygen
+@mixin font-oxygen {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 400;
+}
+// Font Lora
+@mixin font-lora {
+	font-family: 'Lora', serif;
+	font-weight: 400;
+}
+// Props Typography
+@mixin font-props($font-size, $line-height, $letter-spacing:0) {
+	font-size: $font-size;
+	line-height: calc($line-height / $font-size * 100%);
+	@if($letter-spacing > 0) {
+		letter-spacing: $letter-spacing;
+	}
+}
