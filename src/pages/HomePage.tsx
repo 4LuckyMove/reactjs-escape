@@ -2,6 +2,7 @@ import { FC } from 'react'
 import Box from '@mui/material/Box'
 import BlockBgImage from 'components/content/BlockBgImage'
 import BlockFilterPost from 'components/content/BlockFilterPost'
+import BlockPosts from 'components/content/BlockPosts'
 
 const HomePage: FC = () => {
 	return (
@@ -13,6 +14,7 @@ const HomePage: FC = () => {
 		>
 			<BlockBgImage />
 			<BlockFilterPost />
+			<BlockPosts />
 		</Box>
 	)
 }

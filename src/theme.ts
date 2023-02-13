@@ -4,7 +4,7 @@ const escapeTheme = createTheme({
 	breakpoints: {
 		values: {
 			xs: 0,
-			sm: 600,
+			sm: 500,
 			md: 940,
 			lg: 1200,
 			xl: 1536,
@@ -48,11 +48,19 @@ const escapeTheme = createTheme({
 		},
 		h4: {
 			fontFamily: 'Lora',
-			fontSize: '2rem',
-			lineHeight: 1.2,
 		},
 	},
-	components: {},
+	components: {
+		MuiDivider: {
+			styleOverrides: {
+				root: {
+					width: '188px',
+					height: '1px',
+					backgroundColor: '#DEDEDE',
+				},
+			},
+		},
+	},
 })
 
 export default escapeTheme

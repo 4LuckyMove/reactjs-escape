@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
-const pages: { 
+const pages: {
 	label: string
-	link: string 
+	link: string
 }[] = [
 	{ label: 'Nature', link: 'nature' },
 	{ label: 'Photography', link: 'photography' },
@@ -17,7 +17,7 @@ const pages: {
 
 const BlockFilterPost: FC = () => {
 	return (
-		<Box component='div' sx={{ height: '65px' }}>
+		<Box component='div' sx={{ minHeight: '65px' }}>
 			<Container
 				maxWidth='md'
 				sx={{
@@ -29,10 +29,13 @@ const BlockFilterPost: FC = () => {
 					alignItems: 'center',
 					justifyContent: 'center',
 					gap: '21px',
+					flexWrap: { xs: 'wrap', md: 'nowrap' },
 				}}
 			>
 				{pages.map(page => (
-					<NavLink to={page.link} className='homepage__filter'>{page.label}</NavLink>
+					<NavLink key={page.link} to={page.link} className='homepage__filter'>
+						{page.label}
+					</NavLink>
 				))}
 			</Container>
 		</Box>
