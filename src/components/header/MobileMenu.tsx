@@ -24,7 +24,9 @@ const MobileMenu: FC<MobileMenuProps> = ({ pages }) => {
 					aria-controls='menu-appbar'
 					aria-haspopup='true'
 					onClick={handleOpenNavMenu}
-					color='inherit'
+					sx={{
+						color: 'white',
+					}}
 				>
 					<MenuIcon />
 				</IconButton>
@@ -68,7 +70,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ pages }) => {
 					mr: 2,
 					display: { xs: 'flex', md: 'none' },
 					flexGrow: 1,
-					color: 'inherit',
+					color: 'white',
 				}}
 			>
 				Escape.

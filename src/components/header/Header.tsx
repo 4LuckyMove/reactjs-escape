@@ -12,7 +12,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const Header: FC = () => {
 	return (
-		<AppBar position='static' color='transparent'>
+		<AppBar position='absolute' color='transparent'>
 			<Container maxWidth='md' sx={{ px: { md: 0 } }}>
 				<Toolbar disableGutters>
 					<Logotype label='Escape.' />

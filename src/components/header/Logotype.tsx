@@ -16,7 +16,7 @@ const Logotype: FC<LogotypeProps> = ({ label }) => {
 				mr: 2,
 				display: { xs: 'none', md: 'block' },
 				flexGrow: 1,
-				color: 'inherit',
+				color: 'white',
 			}}
 		>
 			{label}

@@ -1,9 +1,28 @@
-import React from 'react'
-import Header from 'components/header/Header'
+import { FC } from 'react'
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	RouterProvider,
+	Route,
+} from 'react-router-dom'
+import { CssBaseline } from '@mui/material'
+import Layout from 'components/Layout'
+import HomePage from 'pages/HomePage'
 
-const App = () => {
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path='/' element={<Layout />}>
+			<Route index element={<HomePage />} />
+		</Route>
+	)
+)
+
+const App: FC = () => {
 	return (
-		<Header />
+		<>
+			<CssBaseline />
+			<RouterProvider router={router} />
+		</>
 	)
 }
 
