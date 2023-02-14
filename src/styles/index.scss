@@ -87,6 +87,13 @@ body {
 		}
 		border: 1px solid $c-white-main;
 	}
+	.footer__nav-link {
+		color: rgba($color: $c-white-main, $alpha: 0.6);
+		font-size: 11px;
+		line-height: 26px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
 }
 
 // Media
