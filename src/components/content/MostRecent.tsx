@@ -79,7 +79,7 @@ const cardsMostRecent: ICard[] = [
 
 const MostRecent: FC = () => {
 	return (
-		<Box component='div' sx={{ mb: '60px' }}>
+		<Box component='div'>
 			<TitleBlock title='Most Recent' />
 			<Box
 				component='div'

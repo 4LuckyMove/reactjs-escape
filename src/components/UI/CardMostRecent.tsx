@@ -12,7 +12,30 @@ interface ICardMostRecent {
 
 const CardMostRecent: FC<ICardMostRecent> = ({ card }) => {
 	return (
-		<Card sx={{ maxHeight: '302px' }}>
+		<Card sx={{ maxHeight: '302px', position: 'relative' }}>
+			<Box
+				component='span'
+				sx={{
+					position: 'absolute',
+					top: '10px',
+					left: '10px',
+					zIndex: 2,
+					display: 'inline-block',
+					bgcolor: 'rgba(221, 120, 63, .7)',
+					borderRadius: '2px',
+					border: '1px solid transparent',
+					color: 'white',
+					textAlign: 'center',
+					py: '3px',
+					px: '6px',
+					fontSize: '10px',
+					lineHeight: '10px',
+					textTransform: 'uppercase',
+					letterSpacing: '1px',
+				}}
+			>
+				{card.category}
+			</Box>
 			<CardActionArea>
 				<CardMedia
 					component='img'
@@ -43,7 +66,12 @@ const CardMostRecent: FC<ICardMostRecent> = ({ card }) => {
 							gutterBottom
 							variant='h4'
 							component='div'
-							sx={{ fontSize: '16px', lineHeight: '21px', color: '#101315', mb: '6px' }}
+							sx={{
+								fontSize: '16px',
+								lineHeight: '21px',
+								color: '#101315',
+								mb: '6px',
+							}}
 						>
 							{card.title}
 						</Typography>

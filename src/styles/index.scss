@@ -48,7 +48,7 @@ body {
 	border-radius: 3px;
 	color: $c-white-main;
 	&:hover {
-		opacity: .9;
+		opacity: 0.9;
 	}
 }
 .homepage__filter {
@@ -64,6 +64,28 @@ body {
 	}
 	&.active {
 		color: $c-bg-link;
+	}
+}
+.footer__background {
+	background-image: url('../static/background-footer-home.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	#subscribe {
+		font-size: 12px;
+		font-family: 'Oxygen';
+		color: $c-subscribe;
+		padding: 18px 35px;
+		width: 100%;
+		height: 100%;
+		border-radius: 3px 0 0 3px;
+		&::placeholder {
+			color: $c-subscribe;
+		}
+		&:focus {
+			outline: none;
+		}
+		border: 1px solid $c-white-main;
 	}
 }
 
